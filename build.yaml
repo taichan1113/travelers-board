@@ -20,5 +20,3 @@
 ---
 board:
   - ms88sf21
-include:
-  - board: ms88sf21
