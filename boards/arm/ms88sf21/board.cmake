@@ -1,3 +1,5 @@
-cmake_minimum_required(VERSION 3.13.1)
-find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(ms88sf21)
+# SPDX-License-Identifier: MIT
+
+board_runner_args(nrfjprog "--nrf-family=NRF52" "--softreset")
+include(${ZEPHYR_BASE}/boards/common/uf2.board.cmake)
+include(${ZEPHYR_BASE}/boards/common/nrfjprog.board.cmake)

@@ -1,0 +1,5 @@
+# Build matrix for GitHub Actions using unified-zmk-config-template
+# Add a board entry matching the board name used by Zephyr/West.
+
+board:
+  - ms88sf21

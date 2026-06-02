@@ -1,19 +1,18 @@
 /dts-v1/;
-#include <nrf52840.dtsi>
+#include <nordic/nrf52840.dtsi>
 
 / {
     model = "MS88SF21";
-    compatible = "nordic,nrf52840";
+    compatible = "ms88sf21,v1", "nordic,nrf52840";
 
     chosen {
         zephyr,flash = &flash0;
         zephyr,sram = &sram0;
+        zmk,kscan = &kscan0;
     };
 
-    matrix {
-        compatible = "zmk,matrix";
-        rows = <7>;
-        cols = <6>;
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
         row-gpios = <
             &gpio0 2 GPIO_ACTIVE_LOW
             &gpio0 3 GPIO_ACTIVE_LOW
@@ -31,6 +30,6 @@
             &gpio0 15 GPIO_ACTIVE_LOW
             &gpio0 16 GPIO_ACTIVE_LOW
         >;
-        diodes = "col2row";
+        diode-direction = "col2row";
     };
 };
