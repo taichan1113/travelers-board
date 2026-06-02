@@ -1,0 +1,3 @@
+menuconfig BOARD_MS88SF21
+    bool "MS88SF21 nRF52840 keyboard board"
+    default y

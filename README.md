@@ -1,11 +1,26 @@
-# ZMK Module Template
+# ZMK MS88SF21 Keyboard Module
 
-This repository contains a template for a ZMK module, as it would most frequently be used. 
+This repository defines a custom ZMK board for the MS88SF21 nRF52840 module.
+The board is a single-piece ortholinear keyboard with a logical 7x6 matrix and a physical 4-column symmetric layout of 12 / 12 / 12 / 6 keys.
+
+## Board details
+
+- MCU: nRF52840 (MS88SF21 module)
+- Matrix: 7 rows x 6 columns (42 keys)
+- Physical layout: 4 columns, 12 / 12 / 12 / 6 keys per column, left/right symmetric
+- Diode direction: col2row
+- Encoder: none
+- OLED: none
+- Pointing device: none
+- GPIO pin assignments: dummy pins are provided in the DTS and can be updated later
+
+## Files added
+
+- `boards/arm/ms88sf21/board.cmake`
+- `boards/arm/ms88sf21/Kconfig.board`
+- `dts/arm/ms88sf21.dts`
 
 ## Usage
 
-Read through the [ZMK Module Creation](https://zmk.dev/docs/development/module-creation) page for details on how to configure this template.
-
-## More Info
-
-For more info on modules, you can read through  through the [Zephyr modules page](https://docs.zephyrproject.org/3.5.0/develop/modules.html) and [ZMK's page on using modules](https://zmk.dev/docs/features/modules). [Zephyr's west manifest page](https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#west-manifests) may also be of use.
+This module can be used as a custom ZMK keyboard board definition.
+Update the pin mappings in `dts/arm/ms88sf21.dts` once the actual matrix wiring is available.
