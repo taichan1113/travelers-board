@@ -20,10 +20,14 @@ The board is a single-piece ortholinear keyboard with a logical 7x6 matrix and a
 - `boards/arm/ms88sf21/Kconfig.board`
 - `boards/arm/ms88sf21/ms88sf21.dts`
 - `build.yaml`
+- `config/west.yml`
+- `.github/workflows/build.yml`
+- `zephyr/module.yml`
 
 ## Usage
 
 This module can be used as a custom ZMK keyboard board definition.
 Update the pin mappings in `boards/arm/ms88sf21/ms88sf21.dts` once the actual matrix wiring is available.
 
-If you use `unified-zmk-config-template` for GitHub Actions, the top-level `build.yaml` provides the board matrix for the workflow.
+This repository is based on `zmkfirmware/unified-zmk-config-template`.
+The top-level `build.yaml` is the template example for GitHub Actions and requires board/shield entries to be added before a build matrix is generated.
