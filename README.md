@@ -41,3 +41,7 @@ just build ms88sf21
 
 This repository is based on `zmkfirmware/unified-zmk-config-template`.
 The top-level `build.yaml` contains the `ms88sf21` board target for GitHub Actions and local builds.
+
+## Notes
+
+- [ZMK firmware を SWD 経由で HEX 書き込みする手順](docs/swd-hex-flashing.md)
